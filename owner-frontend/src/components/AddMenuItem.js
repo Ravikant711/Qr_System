@@ -111,7 +111,7 @@ const AddMenuItem = () => {
         {filteredItems.map((item) => (
           <div key={item.id} className="menu-item">
             <img src={item.image} alt={item.name} className="item-image" />
-            <p>{item.name}</p>
+            <p dangerouslySetInnerHTML={{ __html: item.name }} />
             <p>Category: {item.category}</p>
             <button onClick={() => addItemToMenu(item)}>Add</button>
           </div>
